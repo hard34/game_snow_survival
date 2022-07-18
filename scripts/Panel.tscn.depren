@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/inventory.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Panel.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Item_v_inventory.tscn" type="PackedScene" id=3]
+
+[node name="Panel" type="NinePatchRect"]
+margin_right = 108.0
+margin_bottom = 22.0
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 105.0
+margin_bottom = 19.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+margin_right = 102.0
+margin_bottom = 16.0
+mouse_filter = 0
+size_flags_horizontal = 3
+custom_constants/separation = 5
+
+[node name="Item_v_inventory" parent="ScrollContainer/HBoxContainer" instance=ExtResource( 3 )]
+
+[node name="Item_v_inventory2" parent="ScrollContainer/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 21.0
+margin_right = 37.0
+
+[node name="Item_v_inventory3" parent="ScrollContainer/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 42.0
+margin_right = 58.0
+
+[node name="Item_v_inventory4" parent="ScrollContainer/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 63.0
+margin_right = 79.0
+
+[node name="Item_v_inventory5" parent="ScrollContainer/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 84.0
+margin_right = 100.0
